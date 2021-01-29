@@ -8,7 +8,9 @@ class FakeWickr {
     cmdDeleteKeyValue() {}
     cmdGetKeyValue() {}
     cmdGetRooms() {
-        return this.fakeRooms;
+        return {
+            rooms: this.fakeRooms
+        };
     }
     cmdStartAsyncRecvMessages() {}
     cmdSendRoomMessage() {}
