@@ -30,7 +30,7 @@ describe('bot', function() {
             this.bot.announce('foo', announcement);
 
             expect(this.bot.send
-                .calledWith('foo', `Sent announcement to ${this.fakeWickr.fakeRooms.length} rooms`))
+                .calledWith('foo', `Sending announcement to ${this.fakeWickr.fakeRooms.length} rooms ...`))
                 .to.be.true;
 
             for (const oneFakeRoom in this.fakeWickr.fakeRooms) {
@@ -38,6 +38,11 @@ describe('bot', function() {
                     .calledWith(oneFakeRoom.vgroupid, announcement))
                     .to.be.true;
             }
+
+            expect(this.bot.send
+                .calledWith('foo', `Announcement complete \uD83C\uDF7B`))
+                .to.be.true;
+
         });
     
         it('will return an error if it is not in any rooms', function() {
