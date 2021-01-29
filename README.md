@@ -11,8 +11,10 @@ See the WickrIO [Getting Started Guide](https://wickrinc.github.io/wickrio-docs/
 Announcement Bot understands the following commands:
 
  - `/help` - Prints a help message with all available commands
+ - /announce [announcement] - Sends an announcement to every room the bot is a member of
 
 ## Development
+
 
 ### Building
 
